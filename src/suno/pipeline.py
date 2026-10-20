@@ -151,7 +151,7 @@ def process_suno_wav(
     )
 
     report = {
-        "input": str(input_path.resolve()),
+        "input": input_path.name,
         "sample_rate": sample_rate,
         "channels": info.channels,
         "duration_seconds": n_frames / sample_rate,
@@ -171,8 +171,8 @@ def process_suno_wav(
         "reconstruction_threshold_db": params.reconstruction_threshold_db,
         "clip_warning": clip_warning,
         "outputs": {
-            "phase_cancelled_clean": str(clean_path.resolve()),
-            "removed_noise": str(noise_path.resolve()),
+            "phase_cancelled_clean": clean_path.name,
+            "removed_noise": noise_path.name,
         },
     }
 

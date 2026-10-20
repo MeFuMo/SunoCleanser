@@ -11,3 +11,4 @@ build/
 .ruff_cache/
 *.wav
 !tests/fixtures/*.wav
+out/
