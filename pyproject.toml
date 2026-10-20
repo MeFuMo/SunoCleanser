@@ -1,0 +1,19 @@
+[project]
+name = "sunocleanser"
+version = "0.1.0"
+description = "Suno WAV adaptive spectral denoise CLI"
+requires-python = ">=3.11"
+dependencies = [
+    "numpy>=1.26",
+    "scipy>=1.11",
+    "soundfile>=0.12",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+
+[project.scripts]
+suno-clean = "src.cli:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

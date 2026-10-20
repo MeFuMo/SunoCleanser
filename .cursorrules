@@ -1,0 +1,34 @@
+# CURSOR RULES - SUNOCLEANSER
+
+## ZONAS PROHIBIDAS
+- NUNCA modifiques archivos fuera de /src salvo /docs, raíz (README, environment.yml, requirements.txt) y configuración de proyecto
+- NUNCA modifiques fuera de D:\progs\sunocleanser
+- NUNCA uses rm, rmdir, del, Remove-Item, o comandos destructivos si no se te pide explicitamente
+- NUNCA instales dependencias, descargues desde Internet o crees entornos virtuales sin preguntar primero (excepto conda documentado en README)
+
+## FLUJO OBLIGATORIO
+1. Antes de cualquier cambio, explica qué vas a hacer de forma clara, directa y destacada en el texto
+2. Código de aplicación en /src; documentación en /docs
+3. Sugiere git commit después de cambios significativos
+
+## DOCUMENTACIÓN
+- Lee /docs/ antes de empezar cualquier tarea
+- Actualiza los docs si cambias la arquitectura
+
+## COMANDOS PERMITIDOS SIN PERMISO
+- git status, git diff, git log
+- Lectura de archivos
+- Validación de sintaxis del lenguaje en uso
+
+## COMANDOS QUE REQUIEREN PERMISO EXPLÍCITO
+- Instalación de dependencias fuera del entorno conda sunocleanser
+- Ejecución de scripts que modifiquen el sistema
+- Cualquier descarga de Internet
+
+## LENGUAJE Y ENTORNO
+- Python 3.11+, entorno conda `sunocleanser`
+- KISS, DRY, Clean Code
+- El usuario utiliza PowerShell
+
+## SI TIENES DUDAS
+PREGUNTA. No asumas. No inventes funciones.

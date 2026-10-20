@@ -1,0 +1,10 @@
+name: sunocleanser
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - numpy>=1.26
+  - scipy>=1.11
+  - pysoundfile>=0.12
+  - libsndfile
+  - pytest>=7.0
