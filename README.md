@@ -52,6 +52,8 @@ python -m src.gui
 
 En la ventana: **Examinar** → elige el WAV, ajusta el **título** si quieres, **Procesar**. **Abrir out/** abre la carpeta de salidas.
 
+La GUI se inicia en **inglés**. Usa el selector **Language / Idioma** en la parte superior de la ventana para cambiar entre **English** y **Español** en cualquier momento.
+
 ## Carpeta `out/`
 
 Todas las salidas de la GUI van a **`out/`** (relativa al directorio desde el que lanzas la app). Esa carpeta está en el repo solo con `.gitkeep`; WAV e informes **no se suben a Git** (`out/*` en `.gitignore`).
