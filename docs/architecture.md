@@ -10,6 +10,7 @@
 | `src/suno/gain_mask.py` | Máscara adaptativa por bandas, techo 7 dB, suavizado |
 | `src/suno/pipeline.py` | Orquestación, verificación fase, informe JSON |
 | `src/cli.py` | Interfaz de línea de comandos |
+| `src/gui/app.py` | Ventana tkinter; llama a `process_suno_wav()` |
 
 ## Dependencias
 
@@ -26,6 +27,9 @@ conda activate sunocleanser
 python -m src.cli path\to\song.wav
 ```
 
-## GUI (v2)
+## GUI
 
-Pendiente: envoltorio gráfico que llame a `process_suno_wav()` sin duplicar DSP.
+- `sunocleanser-gui.bat` — `conda run` + `python -m src.gui`
+- O: `conda activate sunocleanser` y `python -m src.gui`
+
+Salida por defecto en `out/`. Procesamiento en un hilo aparte para no bloquear la ventana.

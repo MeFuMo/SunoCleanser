@@ -1,8 +1,15 @@
 # sunocleanser
 
-CLI para limpiar WAV de Suno con denoise espectral adaptativo, cancelación de fase de verificación y dos exportaciones 24-bit.
+Limpia exportaciones WAV de Suno con denoise espectral adaptativo, cancelación de fase de verificación y dos archivos de salida en 24-bit.
 
-## Conda (recomendado)
+**GUI** (tkinter) para Windows y **CLI** para scripts o automatización. El DSP vive en `process_suno_wav()`; la interfaz no duplica lógica.
+
+## Requisitos
+
+- Windows (GUI probada ahí; CLI en cualquier OS con Python 3.11+)
+- [Miniconda](https://docs.conda.io/en/latest/miniconda.html) o Anaconda
+
+## Instalación
 
 ```powershell
 cd D:\progs\sunocleanser
@@ -10,24 +17,59 @@ conda env create -f environment.yml
 conda activate sunocleanser
 ```
 
-Actualizar entorno tras cambios en `environment.yml`:
+Actualizar tras cambios en `environment.yml`:
 
 ```powershell
 conda env update -f environment.yml --prune
 ```
 
-## Uso
+Opcional, dentro del entorno activado:
+
+```powershell
+pip install -e .
+```
+
+Instala el comando `sunocleanser-gui` (equivalente a `python -m src.gui`).
+
+## Uso rápido (GUI)
+
+1. Crea el entorno `sunocleanser` (una vez).
+2. Doble clic en **`sunocleanser-gui.bat`** en la raíz del proyecto.
+
+El `.bat` hace `conda run -n sunocleanser` y abre la ventana. No hace falta `conda activate` manual.
+
+Alternativa:
+
+```powershell
+cd D:\progs\sunocleanser
+conda activate sunocleanser
+python -m src.gui
+```
+
+En la ventana: **Examinar** → elige el WAV, ajusta el **título** si quieres, **Procesar**. **Abrir out/** abre la carpeta de salidas.
+
+## Carpeta `out/`
+
+Todas las salidas de la GUI van a **`out/`** (relativa al directorio desde el que lanzas la app). Esa carpeta está en el repo solo con `.gitkeep`; WAV e informes **no se suben a Git** (`out/*` en `.gitignore`).
+
+## Archivos que genera
+
+| Archivo | Qué es |
+|---------|--------|
+| `{título} - Phase Cancelled Clean.wav` | Versión limpia (usar en el mix) |
+| `{título} - Removed Noise.wav` | Solo lo restado (diagnóstico) |
+| `{stem}.report.json` | Parámetros, picos, verificación de fase |
+
+Los informes JSON usan **nombres de archivo**, no rutas absolutas de tu PC.
+
+## CLI
 
 ```powershell
 conda activate sunocleanser
 python -m src.cli "C:\ruta\cancion.wav" --out-dir out --title "Mi tema"
 ```
 
-Salidas:
-
-- `Mi tema - Phase Cancelled Clean.wav`
-- `Mi tema - Removed Noise.wav`
-- `{stem}.report.json` (junto al WAV o en `--out-dir` si se indica carpeta)
+Sin `--out-dir`, los WAV se escriben junto al archivo de entrada; el informe sigue la misma regla que en la ayuda (`python -m src.cli -h`).
 
 ## Tests
 
@@ -39,4 +81,4 @@ python -m pytest tests/ -q
 ## Documentación
 
 - [docs/suno-denoise.md](docs/suno-denoise.md) — método DSP
-- [docs/architecture.md](docs/architecture.md) — módulos
+- [docs/architecture.md](docs/architecture.md) — módulos y GUI
