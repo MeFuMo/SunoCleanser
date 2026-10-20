@@ -20,7 +20,7 @@ conda env update -f environment.yml --prune
 
 ```powershell
 conda activate sunocleanser
-python -m src.cli "C:\ruta\cancion.wav" --out-dir "C:\salida" --title "Mi tema"
+python -m src.cli "C:\ruta\cancion.wav" --out-dir out --title "Mi tema"
 ```
 
 Salidas:

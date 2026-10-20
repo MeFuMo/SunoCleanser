@@ -11,4 +11,6 @@ build/
 .ruff_cache/
 *.wav
 !tests/fixtures/*.wav
-out/
+# Salidas locales (WAV + informes); la carpeta sí está en el repo
+out/*
+!out/.gitkeep
