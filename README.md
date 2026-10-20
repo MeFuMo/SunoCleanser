@@ -38,9 +38,9 @@ Instala el comando `sunocleanser-gui` (equivalente a `python -m src.gui`).
 ## Uso rápido (GUI)
 
 1. Crea el entorno `sunocleanser` (una vez).
-2. Doble clic en **`sunocleanser-gui.bat`** en la raíz del proyecto.
+2. Windows: doble clic en **`sunocleanser-gui.bat`**. Linux/macOS: `./sunocleanser-gui.sh` (`chmod +x sunocleanser-gui.sh` si hace falta).
 
-El `.bat` hace `conda run -n sunocleanser` y abre la ventana. No hace falta `conda activate` manual.
+El lanzador localiza conda si hace falta, usa `conda run -n sunocleanser` y abre la ventana. No hace falta `conda activate` manual.
 
 Alternativa:
 
