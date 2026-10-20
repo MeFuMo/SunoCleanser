@@ -4,6 +4,8 @@
 
 Limpia exportaciones WAV de Suno con denoise espectral adaptativo, cancelación de fase de verificación y dos archivos de salida en 24-bit.
 
+Usa una líea de proceso posteada en Reddit por u/Cookienomster45, a quien su dios guarda silla fija en el banquete de los héroes.
+
 **GUI** (tkinter) para Windows y **CLI** para scripts o automatización. El DSP vive en `process_suno_wav()`; la interfaz no duplica lógica.
 
 ## Requisitos
