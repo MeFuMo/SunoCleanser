@@ -4,6 +4,8 @@
 
 Cleans Suno WAV exports with adaptive spectral denoise, phase-cancel verification, and two 24-bit output files.
 
+Uses a process as posted in Reddit by u/Cookienomster45. May your god keep you in any kind of eternal feast of heroes.
+
 **GUI** (tkinter) on Windows and **CLI** for scripts or automation. DSP lives in `process_suno_wav()`; the UI does not duplicate processing logic.
 
 ## Requirements
