@@ -1,5 +1,7 @@
 # Suno Adaptive Spectral Denoise (v1)
 
+**Idioma:** [Español](suno-denoise.md) · [English](suno-denoise.en.md)
+
 ## Objetivo
 
 Reducir estática tipo radio y textura de saturación artificial típica de exportaciones Suno, preservando ataque transitorio, voz, graves (&lt;350 Hz con procesado mínimo) e imagen estéreo.

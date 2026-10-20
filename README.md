@@ -1,5 +1,7 @@
 # sunocleanser
 
+**Idioma:** [Español](README.md) · [English](README.en.md)
+
 Limpia exportaciones WAV de Suno con denoise espectral adaptativo, cancelación de fase de verificación y dos archivos de salida en 24-bit.
 
 **GUI** (tkinter) para Windows y **CLI** para scripts o automatización. El DSP vive en `process_suno_wav()`; la interfaz no duplica lógica.
@@ -82,3 +84,5 @@ python -m pytest tests/ -q
 
 - [docs/suno-denoise.md](docs/suno-denoise.md) — método DSP
 - [docs/architecture.md](docs/architecture.md) — módulos y GUI
+
+(English: [README.en.md](README.en.md), [suno-denoise.en.md](docs/suno-denoise.en.md), [architecture.en.md](docs/architecture.en.md))

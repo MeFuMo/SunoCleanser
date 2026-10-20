@@ -1,5 +1,7 @@
 # Arquitectura — sunocleanser
 
+**Idioma:** [Español](architecture.md) · [English](architecture.en.md)
+
 ## Módulos
 
 | Módulo | Responsabilidad |
