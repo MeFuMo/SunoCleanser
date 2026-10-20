@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 import os
+import subprocess
 import sys
 import threading
 import tkinter as tk
@@ -146,10 +147,17 @@ class SunoCleanserApp:
 
     def _open_out(self) -> None:
         OUT_DIR.mkdir(parents=True, exist_ok=True)
+        folder = OUT_DIR.resolve()
+        opened = False
         if sys.platform == "win32":
-            os.startfile(OUT_DIR.resolve())  # noqa: S606 — lanzador de carpeta en Windows
+            os.startfile(folder)  # noqa: S606
+            opened = True
+        elif sys.platform == "darwin":
+            opened = subprocess.run(["open", folder], check=False).returncode == 0
         else:
-            messagebox.showinfo("SunoCleanser", self._text("folder", path=OUT_DIR.resolve()))
+            opened = subprocess.run(["xdg-open", folder], check=False).returncode == 0
+        if not opened:
+            messagebox.showinfo("SunoCleanser", self._text("folder", path=folder))
 
     def _start(self) -> None:
         if self._processing:

@@ -31,7 +31,7 @@ python -m src.cli path\to\song.wav
 
 ## GUI
 
-- `sunocleanser-gui.bat` — `conda run` + `python -m src.gui`
+- `sunocleanser-gui.bat` / `sunocleanser-gui.sh` — `conda run` + `python -m src.gui` (el `.sh` puede cargar `conda.sh` si conda no está en el PATH)
 - O: `conda activate sunocleanser` y `python -m src.gui`
 
 Salida por defecto en `out/`. Procesamiento en un hilo aparte para no bloquear la ventana.
