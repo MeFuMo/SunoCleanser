@@ -52,6 +52,8 @@ python -m src.gui
 
 In the window: **Browse** → pick the WAV, set **title** if you want, **Process**. **Open out/** opens the output folder.
 
+The GUI starts in **English**. Use the **Language** selector at the top of the window to switch between **English** and **Español** at any time.
+
 ## `out/` folder
 
 All GUI outputs go to **`out/`** (relative to the directory you launch from). The repo only tracks `.gitkeep` there; WAVs and reports **are not pushed to Git** (`out/*` in `.gitignore`).
