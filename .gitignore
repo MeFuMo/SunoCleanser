@@ -1,3 +1,6 @@
+.cursor/
+.cursorrules
+
 __pycache__/
 *.py[cod]
 .venv/
