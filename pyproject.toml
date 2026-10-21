@@ -1,8 +1,8 @@
 [project]
 name = "sunocleanser"
-version = "0.1.0"
-description = "Suno WAV adaptive spectral denoise CLI"
-requires-python = ">=3.11"
+version = "0.2.0"
+description = "Suno WAV adaptive spectral denoise (CLI + bilingual GUI)"
+requires-python = ">=3.9"
 dependencies = [
     "numpy>=1.26",
     "scipy>=1.11",

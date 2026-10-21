@@ -1,6 +1,7 @@
 # Config local (Cursor, reglas personales) — NUNCA al remoto
 .cursor/
 .cursorrules
+.DS_Store
 
 __pycache__/
 *.py[cod]
